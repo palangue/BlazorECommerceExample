@@ -1,0 +1,27 @@
+﻿@page "/DataBinding/Assignment"
+
+@using BlazorECommersData
+
+<h3>Product</h3>
+
+Name : @product.Name<br />
+Active : @product.IsActive<br />
+Price : @product.Price<br />
+This product is @(product.IsActive ? "Active" :"Inactive")<br /><br />
+
+Active : <input type="checkbox" @bind-value="product.IsActive" /><br />
+Active : <input type="checkbox" @bind-value="product.IsActive" checked="@(product.IsActive ? "checked" : null)" /><br />
+Price : <input type="number" @bind-value="product.Price" /> is TwoWay Binding<br />
+
+
+@code {
+    DemoProduct product = new()
+    {
+        Id = 1,
+        Name = "Yankee Candle",
+        IsActive = true,
+        Price = 9.99
+    };
+
+}
+
