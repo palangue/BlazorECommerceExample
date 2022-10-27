@@ -1,0 +1,12 @@
+/Users/uncleboksun/Projects/BlazorECommerceExample/BlazorECommersData/bin/Debug/net6.0/BlazorECommersData.deps.json
+/Users/uncleboksun/Projects/BlazorECommerceExample/BlazorECommersData/bin/Debug/net6.0/BlazorECommersData.dll
+/Users/uncleboksun/Projects/BlazorECommerceExample/BlazorECommersData/bin/Debug/net6.0/BlazorECommersData.pdb
+/Users/uncleboksun/Projects/BlazorECommerceExample/BlazorECommersData/obj/Debug/net6.0/BlazorECommersData.csproj.AssemblyReference.cache
+/Users/uncleboksun/Projects/BlazorECommerceExample/BlazorECommersData/obj/Debug/net6.0/BlazorECommersData.GeneratedMSBuildEditorConfig.editorconfig
+/Users/uncleboksun/Projects/BlazorECommerceExample/BlazorECommersData/obj/Debug/net6.0/BlazorECommersData.AssemblyInfoInputs.cache
+/Users/uncleboksun/Projects/BlazorECommerceExample/BlazorECommersData/obj/Debug/net6.0/BlazorECommersData.AssemblyInfo.cs
+/Users/uncleboksun/Projects/BlazorECommerceExample/BlazorECommersData/obj/Debug/net6.0/BlazorECommersData.csproj.CoreCompileInputs.cache
+/Users/uncleboksun/Projects/BlazorECommerceExample/BlazorECommersData/obj/Debug/net6.0/BlazorECommersData.dll
+/Users/uncleboksun/Projects/BlazorECommerceExample/BlazorECommersData/obj/Debug/net6.0/refint/BlazorECommersData.dll
+/Users/uncleboksun/Projects/BlazorECommerceExample/BlazorECommersData/obj/Debug/net6.0/BlazorECommersData.pdb
+/Users/uncleboksun/Projects/BlazorECommerceExample/BlazorECommersData/obj/Debug/net6.0/ref/BlazorECommersData.dll

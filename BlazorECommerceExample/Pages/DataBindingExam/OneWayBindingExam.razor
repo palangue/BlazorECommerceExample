@@ -1,0 +1,33 @@
+﻿@page "/DataBinding/OneWay"
+
+@using BlazorECommersData
+
+<h3>Product</h3>
+
+Name : @product.Name<br />
+IsActive : @product.IsActive<br />
+
+Price : @product.Price<br />
+Price : <input type="number" value="@product.Price" /> is OneWay Binding<br />
+Price : <input type="number" @bind-value="product.Price" /> is TwoWay Binding<br />
+<p>
+    Focus moved or Up Down Button Clicked
+</p>
+Price : <input type="number" @bind-value="product.Price" @bind-value:event="oninput" /> is TwoWay Binding and User Input
+<p>
+    Every Actions
+</p>
+
+<a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-6.0">Reference here</a>
+
+@code {
+    DemoProduct product = new()
+    {
+        Id = 1,
+        Name = "Yankee Candle",
+        IsActive = true,
+        Price = 9.99
+    };
+
+}
+
