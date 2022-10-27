@@ -6,4 +6,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Pages\DataBindingExam\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\DataBindingExam\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorECommersData\BlazorECommersData.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

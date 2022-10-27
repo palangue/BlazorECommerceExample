@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1703.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorECommerceExample", "BlazorECommerceExample\BlazorECommerceExample.csproj", "{DC4FF6F7-8484-4EE2-A3C9-D4A4EDE1B3AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorECommersData", "BlazorECommersData\BlazorECommersData.csproj", "{9ACC3806-A428-4D30-A9EC-53A17FC0F315}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DC4FF6F7-8484-4EE2-A3C9-D4A4EDE1B3AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC4FF6F7-8484-4EE2-A3C9-D4A4EDE1B3AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC4FF6F7-8484-4EE2-A3C9-D4A4EDE1B3AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ACC3806-A428-4D30-A9EC-53A17FC0F315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ACC3806-A428-4D30-A9EC-53A17FC0F315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ACC3806-A428-4D30-A9EC-53A17FC0F315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ACC3806-A428-4D30-A9EC-53A17FC0F315}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

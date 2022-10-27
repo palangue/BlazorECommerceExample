@@ -1,32 +1,53 @@
-﻿@page "/DataBinding/OneWay"
+﻿@page "/DataBinding/DropDown"
 
 @using BlazorECommersData
 
 <h3>Product</h3>
 
-Name : @product.Name<br />
-IsActive : @product.IsActive<br />
+Name : @product.Name
+<br />
+Price : @product.Price
+<br />
+Product Properties Selected : @SelectedProp
+<br />
 
-Price : @product.Price<br />
-Price : <input type="number" value="@product.Price" /> is OneWay Binding<br />
-Price : <input type="number" @bind-value="product.Price" /> is TwoWay Binding<br />
-<p>
-    Focus moved or Up Down Button Clicked
-</p>
-Price : <input type="number" @bind-value="product.Price" @bind-value:event="oninput" /> is TwoWay Binding and User Input
-<p>
-    Every Actions
-</p>
+@if (!string.IsNullOrEmpty(SelectedProp))
+{
+    <p>Product Properties Value : @product.ProductProperties.FirstOrDefault( item => item.Key.Equals(SelectedProp)).Value</p>
+}
 
-<a href="https://learn.microsoft.com/en-us/aspnet/core/blazor/components/event-handling?view=aspnetcore-6.0">Reference here</a>
+
+<br />
+<br />
+Price :
+<input type="number" @bind-value="product.Price" />
+<br />
+
+
+Product properties :
+<select @bind="SelectedProp">
+    @foreach (var item in product.ProductProperties)
+    {
+        <option value="@item.Key">@item.Key</option>
+    }
+</select>
 
 @code {
+
+    private string SelectedProp = string.Empty;
+
     DemoProduct product = new()
     {
         Id = 1,
         Name = "Yankee Candle",
         IsActive = true,
-        Price = 9.99
+        Price = 9.99,
+        ProductProperties = new List<DemoProductProp>()
+{
+    new DemoProductProp{ Id = 1, Key = "Color", Value = "Black" },
+    new DemoProductProp{Id =2, Key = "Flavor", Value = "Rose Jasmine"},
+    new DemoProductProp{Id = 3, Key = "size", Value = "20oz"}
+}
     };
 
 }
