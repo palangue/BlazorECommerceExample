@@ -2,35 +2,48 @@
 
 @using BlazorECommersData
 
-<h3>Product</h3>
+<div class="row">
 
-Name : @product.Name
-<br />
-Price : @product.Price
-<br />
-Product Properties Selected : @SelectedProp
-<br />
+    <div class="col-6 border p-3">
+        <h3 class="text-primary">Product Summary</h3>
+        <hr />
+        Name : @product.Name
+        <br />
+        Price : @product.Price
+        <br />
+        Product Properties Selected : @SelectedProp
+        <br />
 
-@if (!string.IsNullOrEmpty(SelectedProp))
-{
-    <p>Product Properties Value : @product.ProductProperties.FirstOrDefault( item => item.Key.Equals(SelectedProp)).Value</p>
-}
+        @if (!string.IsNullOrEmpty(SelectedProp))
+        {
+            <p>Product Properties Value : @product.ProductProperties.FirstOrDefault(item => item.Key.Equals(SelectedProp)).Value</p>
+        }
+    </div>
+
+    <div class="col-6 border p-3">
+        <h3 class="text-primary">Product Playground</h3>
+        <hr />
+        <div>
+            Price :
+            <input type="number" @bind-value="product.Price" />
+
+        </div>
+
+        <div>
+            Product properties :
+            <select @bind="SelectedProp">
+                @foreach (var item in product.ProductProperties)
+                {
+                    <option value="@item.Key">@item.Key</option>
+                }
+            </select>
+        </div>
+    </div>
+
+</div>
 
 
-<br />
-<br />
-Price :
-<input type="number" @bind-value="product.Price" />
-<br />
 
-
-Product properties :
-<select @bind="SelectedProp">
-    @foreach (var item in product.ProductProperties)
-    {
-        <option value="@item.Key">@item.Key</option>
-    }
-</select>
 
 @code {
 
