@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorECommerceExample", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorECommersData", "BlazorECommersData\BlazorECommersData.csproj", "{9ACC3806-A428-4D30-A9EC-53A17FC0F315}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorECommersData.DataAccess", "BlazorECommersData.DataAccess\BlazorECommersData.DataAccess.csproj", "{427CCF4F-C069-40B7-856B-B8CF6C0D24E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9ACC3806-A428-4D30-A9EC-53A17FC0F315}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ACC3806-A428-4D30-A9EC-53A17FC0F315}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ACC3806-A428-4D30-A9EC-53A17FC0F315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427CCF4F-C069-40B7-856B-B8CF6C0D24E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427CCF4F-C069-40B7-856B-B8CF6C0D24E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427CCF4F-C069-40B7-856B-B8CF6C0D24E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427CCF4F-C069-40B7-856B-B8CF6C0D24E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

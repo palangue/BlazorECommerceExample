@@ -1,10 +1,25 @@
 ﻿@page "/DataBindingExam/DemoProduct"
 @using BlazorECommersData
+@using BlazorECommerceExample.Pages.DataBindingExam.DataBindingComponents
 
-<h2>Demo Product</h2>
+<h2>Demo Product - @FavoriteCount</h2>
+
+<div class="border" style="background-color: azure">
+    <div class="row">
+        @foreach (var item in Products)
+        {
+            <_IndivisualProduct Product="@item" OnFavoriteUpdated="FavoriteCounterUpdate">
+
+            </_IndivisualProduct>
+        }
+    </div>
+</div>
+
 
 @code {
     List<Demo_Product> Products = new();
+
+    public int FavoriteCount { get; set; } = 0;
 
     protected override void OnInitialized()
     {
@@ -36,6 +51,18 @@
                 new DemoProductProp(){Id=3, Key="Color", Value="White"}
             }
         });
+    }
+
+    public void FavoriteCounterUpdate(bool selected)
+    {
+        if (selected)
+        {
+            FavoriteCount++;
+        }
+        else
+        {
+            FavoriteCount--;
+        }
     }
 }
 

@@ -1,0 +1,36 @@
+﻿@using BlazorECommersData
+@using BlazorECommerceExample.Pages.DataBindingExam.DataBindingComponents
+
+<div class="bg-lignt border p-2 col-5">
+
+    <input type="checkbox" @onchange="FavoriteUpdate" />Add to Favorite
+
+    <h4 class="text-secondary ">Product - @Product.Id</h4>
+    Name - @Product.Name<br />
+    Show Properties :
+    <input type="checkbox" @bind-value="Product.IsActive" checked="@(Product.IsActive ? "checked" : null)" />
+    @if (Product.IsActive)
+    {
+        @foreach (var itemProp in Product.ProductProperties)
+        {
+            <p>@itemProp.Key - @itemProp.Value</p>
+        }
+    }
+    <br />
+    <_DeleteEditButtons IsActive="@Product.IsActive">
+
+    </_DeleteEditButtons>
+</div>
+@code {
+    [Parameter]
+    public Demo_Product Product { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> OnFavoriteUpdated { get; set; }
+
+    private async Task FavoriteUpdate(ChangeEventArgs e)
+    {
+        await OnFavoriteUpdated.InvokeAsync((bool)e.Value);
+    }
+}
+

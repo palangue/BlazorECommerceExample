@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using BlazorECommerceExample.Data;
+﻿using BlazorECommersData.DataAccess.DataContexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlazorECommerceExample;
 
@@ -13,7 +12,19 @@ public class Program
         // Add services to the container.
         builder.Services.AddRazorPages();
         builder.Services.AddServerSideBlazor();
-        builder.Services.AddSingleton<WeatherForecastService>();
+
+        // in mac. startup project does not match library. so dotnet ef cli needs to apply startup path like this:
+        // dotnet ef --startup-project migrations add First_Database_Migration
+
+        builder.Services.AddDbContext<ECommersContext>(options =>
+        {
+
+            // var connectionString = builder.Configuration.GetConnectionString("MariaDb");
+            // options.UseMySql(ServerVersion.AutoDetect(connectionString), p => {
+            //     p.MigrationsAssembly("../BlazorECommersData.DataAccess");
+                
+            // });
+        });
 
         var app = builder.Build();
 
